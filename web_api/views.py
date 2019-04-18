@@ -2,7 +2,8 @@ from rest_framework import generics
 from web.models import Track
 from web_api.serializer import musical_serializer
 from rest_framework.permissions import IsAuthenticated
-from .permissions import OwnerCanManageOrReadOnly
+from json import JSONEncoder
+from django.http import JsonResponse
 
 
 class musical_api_view(generics.ListAPIView):
